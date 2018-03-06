@@ -17,7 +17,7 @@ class getData:UIViewController{
         getLocationData()
     }
     
-    //取得縣市資料
+    //取得資料
     func getLocationData() {
       
         Connect.getRemoteData("URL", parameters: [:]) { (response, error) in
@@ -28,11 +28,8 @@ class getData:UIViewController{
             } else {
                 let data = response["Content"]["zones"]
                 print(data)
-            }
-            
-        }
-        
-        
+            }   
+        }  
     }
     
     
